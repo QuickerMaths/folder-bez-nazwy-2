@@ -50,6 +50,9 @@ a {
   background-color: rgb(250, 250, 250);
   color: #000;
 }
+.light-mode .country-detail__button-back {
+  color: #000;
+}
 .light-mode .header,
 .light-mode .main-section__filters-container,
 .light-mode .main-section__filter {
