@@ -1,0 +1,39 @@
+.header {
+  padding: 25px 0px;
+  box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.5);
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &__container {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  &__mode-container {
+    cursor: pointer;
+    overflow: hidden;
+    height: 16px;
+  }
+
+  &__mode {
+    font-size: 1.2rem;
+    font-weight: 300;
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.mode-active {
+  transform: translateY(-100%);
+}

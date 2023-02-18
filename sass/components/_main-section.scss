@@ -1,0 +1,241 @@
+.main-section {
+  width: calc(100% - 20px);
+  margin: 0 auto;
+
+  &__ui-container {
+    margin: 0 auto 30px auto;
+
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: calc(100% - 150px);
+    }
+  }
+
+  &__input-container {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__search-svg {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  &__input {
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.5);
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 0px 15px 50px;
+  }
+
+  &__filter {
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.5);
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    @media (min-width: 1200px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__filter-content {
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__filters-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 0px;
+    transition: height, 0.5s ease;
+    overflow: hidden;
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.5);
+    width: 100%;
+  }
+
+  &__list {
+    padding: 15px;
+  }
+
+  &__item {
+    font-weight: 300;
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  &__country-container {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.5);
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 265px;
+  }
+
+  &__country-flag {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+    height: 150px;
+  }
+
+  &__content-container {
+    padding: 20px 20px 40px 20px;
+  }
+
+  &__country {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  &__population,
+  &__region,
+  &__capital {
+    padding-bottom: 5px;
+  }
+
+  &__span {
+    font-weight: 300;
+  }
+}
+
+.country-detail {
+  overflow: scroll;
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__container {
+    width: calc(100% - 40px);
+    margin: 30px auto;
+    font-size: 1.4rem;
+  }
+
+  &__button-back {
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 1);
+    display: block;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__main-container {
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      gap: 200px;
+    }
+  }
+
+  &__content-container {
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    @media (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+    }
+  }
+
+  &__img {
+    width: 50%;
+
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+  }
+
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__span {
+    color: $Dark-Gray-Light-Mode-Input;
+    font-weight: 300;
+  }
+
+  &__border-countries-title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__border-countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__border-countries-item {
+    padding: 5px 20px;
+    box-shadow: 0px 7px 18px -8px rgba(66, 68, 90, 0.4);
+    font-weight: 300;
+  }
+}
+
+.active {
+  height: 160px;
+  transition: height, 0.5s ease;
+}
+
+.hidden {
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+
+.search-hidden {
+  display: none;
+}

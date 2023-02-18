@@ -1,0 +1,46 @@
+$Dark-Blue-Dark-Mode-Elements: rgb(43, 57, 69);
+$Very-Dark-Blue-Dark-Mode-Background: rgb(32, 44, 55);
+$Very-Dark-Blue-Light-Mode-Text: rgb(17, 21, 23);
+$Dark-Gray-Light-Mode-Input: rgb(133, 133, 133);
+$Very-Light-Gray-Light-Mode-Background: rgb(250, 250, 250);
+$White-Dark-Mode-Text-Light-Mode-Elements: rgb(255, 255, 255);
+
+@mixin dark-mode {
+  background-color: $Very-Dark-Blue-Dark-Mode-Background;
+  color: #fff;
+
+  input {
+    background-color: $Dark-Blue-Dark-Mode-Elements;
+  }
+
+  .country-detail {
+    background-color: $Very-Dark-Blue-Dark-Mode-Background;
+  }
+
+  .country-detail__button-back {
+    color: #fff;
+  }
+
+  .main-section__filters-container,
+  .main-section__filter,
+  .header,
+  .main-section__country-container,
+  .country-detail__button-back,
+  .country-detail__border-countries-item {
+    background-color: $Dark-Blue-Dark-Mode-Elements;
+  }
+}
+
+@mixin light-mode {
+  background-color: $Very-Light-Gray-Light-Mode-Background;
+  color: #000;
+
+  .main-section__filters-container,
+  .main-section__filter {
+    background-color: $White-Dark-Mode-Text-Light-Mode-Elements;
+  }
+
+  .country-detail {
+    background-color: $Very-Light-Gray-Light-Mode-Background;
+  }
+}
